@@ -1,9 +1,8 @@
 import { useState } from 'react'
-
 import './App.css'
 import './Responsive.css'
 import './page-2.css'
-
+import './page-3.css'
 
 export function Btn() {
   return <button className='btn-header'>Quero ser Nubank</button>
@@ -12,7 +11,7 @@ export function Btn() {
 
 export function App() {
 
-  
+
 
   return (
     <>
@@ -82,20 +81,28 @@ export function App() {
           </div>
           <div className='hero-card-text'>
             <button className='btn-hero-card-1'>Cartão de Credito</button>
-            <h1>O cartão que você controla</h1>
-            <p>Sem anuidade. Sem complicação. Com limite que acompanha você e notificações instantaneas a cada compra.</p>
+            <h1 className='hero-card-title'>O cartão que você controla</h1>
+            <p className='hero-card-description'>Sem anuidade. Sem complicação. Com limite que acompanha você e notificações instantaneas a cada compra.</p>
 
-            <ul>
+            <ul className='hero-list'>
 
-              <li>✔ Zero anuidade, para sempre</li>
-              <li>✔ Programa de pontos e cashback</li>
-              <li>✔ Aceito em milhões de estabelecimentos</li>
-              <li>✔ Bloqueio e desbloqueio pelo app</li>
+              <li><span className='icon-list'>✔</span> Zero anuidade, para sempre</li>
+              <li><span className='icon-list'>✔</span> Programa de pontos e cashback</li>
+              <li><span className='icon-list'>✔</span> Aceito em milhões de estabelecimentos</li>
+              <li><span className='icon-list'>✔</span> Bloqueio e desbloqueio pelo app</li>
 
             </ul>
 
-            <button>Pedir meu Cartão</button>
+            <button className='btn-hero-card-2'>Pedir meu Cartão</button>
           </div>
+        </div>
+      </section>
+
+      <section className='page-3'>
+        <div className='page-3-wrapper'>
+          <h1 className='page-3-title'>Pronto para simplificar sua vida financeira?</h1>
+          <p className='page-3-description'>Abra sua conta em minutos. Sem filas, sem papelada, sem burocracia.</p>
+          <button className='btn-page-3'>Abrir minha conta grátis</button>
         </div>
       </section>
     </>
