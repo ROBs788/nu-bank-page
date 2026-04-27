@@ -1,17 +1,26 @@
+import { useEffect, useRef, useMemo, useLayoutEffect } from 'react';
 import { useState } from 'react'
 import './App.css'
 import './Responsive.css'
 import './page-2.css'
 import './page-3.css'
-
-export function Btn() {
-  return <button className='btn-header'>Quero ser Nubank</button>
-}
-
+import './page-4.css'
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export function App() {
 
+  useLayoutEffect(() => {
+    gsap.to('.text-main, .btn-main, .section-main-2', {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+    });
 
+    return () => {
+      gsap.killTweensOf('.text-main', '.btn-main', '.section-main-2');
+    };
+  }, [])
 
   return (
     <>
@@ -19,14 +28,14 @@ export function App() {
         <img className="logo-nubank" src="./src/assets/nubank-logo-0-1.png" alt="Logo do NuBank" />
 
         <nav className="menu-links">
-          <a className="links-header" href="#">Nubank</a>
-          <a className="links-header" href="#">Nubank Ultravioleta</a>
-          <a className="links-header" href="#">Nu Empresas </a>
-          <a className="links-header" href="#">Segurança</a>
-          <a className="links-header" href="#">Saiba Mais</a>
+          <a className="links-header" >Nubank</a>
+          <a className="links-header" >Nubank Ultravioleta</a>
+          <a className="links-header" >Nu Empresas </a>
+          <a className="links-header" >Segurança</a>
+          <a className="links-header" >Saiba Mais</a>
         </nav>
 
-        <Btn className='btn-header'>Quero ser Nubank</Btn>
+        <button className='btn-header'>Quero ser Nubank</button>
       </header>
 
       <main>
@@ -39,11 +48,21 @@ export function App() {
 
           <section className='section-main-2'>
             <h2 className='text-main-2'>Peça seu Cartão de Crédito e sua Conta do Nubank</h2>
-            <input className='input-main' type="text" placeholder="   Digite seu CPF" />
+
+            <input className='input-main'
+              type="text"
+              id="cpf"
+              placeholder="Digite seu CPF"
+              maxlength="14"
+              pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+              required />
+
+
+
+
             <button className='btn-main-2' aria-label='continuar cadastros'>
               <div className='btn-main-2-wrapper'>
-                <p className='btn-main-2-text'>Continuar</p>
-                <img className='btn-main-2-arrow' src="./src/assets/arrow_.svg" />
+                <p className='btn-main-2-text'>Continuar </p>
               </div>
             </button>
           </section>
@@ -54,13 +73,13 @@ export function App() {
 
 
       <section className='menu-options'>
-        <a href="#">💜Conta do Nubank</a>
-        <a href="#">💳Cartão de Crédito</a>
-        <a href="#">🔒Seguro Nubank</a>
-        <a href="#">📲Nu Celular</a>
-        <a href="#">🛍️Shopping</a>
-        <a href="#">📈Investimentos</a>
-        <a href="#">💰Emprestimos</a>
+        <a >💜Conta do Nubank</a>
+        <a >💳Cartão de Crédito</a>
+        <a >🔒Seguro Nubank</a>
+        <a >📲Nu Celular</a>
+        <a >🛍️Shopping</a>
+        <a >📈Investimentos</a>
+        <a >💰Emprestimos</a>
       </section>
 
       <section className='page-2'>
@@ -105,6 +124,46 @@ export function App() {
           <button className='btn-page-3'>Abrir minha conta grátis</button>
         </div>
       </section>
+
+      <footer>
+        <div className='footer-wrapper'>
+          <div className='footer-section-1'>
+            <img className='footer-logo' src="./src/assets/nubank-logo-0-1.png" alt="Logo do NuBank" />
+            <p>Nubank - Nu Pagamentos S.A.</p>
+            <p>Reinventando a sua vida financeira desde 2013.</p>
+          </div>
+
+          <div className='footer-section-2'>
+            <h2 className='title-section-2'>PRODUTOS</h2>
+            <p>Conta digital</p>
+            <p>Cartão de crédito</p>
+            <p>Investimentos</p>
+            <p>Empréstimo</p>
+          </div>
+
+          <div className='footer-section-3'>
+            <h2 className='title-section-3'>NUBANK</h2>
+            <p>Sobre nos</p>
+            <p>Carreiras</p>
+            <p>Imprensa</p>
+            <p>Comunidade</p>
+          </div>
+
+          <div className='footer-section-4'>
+            <h2 className='title-section-4'>AJUDA</h2>
+            <p>Central de ajuda</p>
+            <p>Blog</p>
+            <p>Segurança</p>
+            <p>Contato</p>
+          </div>
+
+        </div>
+
+        <div className='footer-section-end'>
+          <hr className='hr-footer' />
+          <p>© 2026 Nubank. Todos os direitos reservados. OBRIGADO POR VER ATÉ AQUI! Construido por Robson Arruda Dev.</p>
+        </div>
+      </footer>
     </>
   )
 }

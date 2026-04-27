@@ -1,14 +1,18 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f0f0f0;
-  height: 240vh;
+  height: 220vh;
   width: 100vw;
-  scroll-behavior: smooth;
+  overflow-x: hidden ! important;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.851);
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -16,17 +20,17 @@ header {
   left: 0;
   right: 0;
   width: 100vw;
-  height: 13vh;
+  height: 12vh;
   z-index: 201;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
 
 }
 
 .logo-nubank {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   z-index: 100;
   margin-left: 30px;
 }
@@ -56,7 +60,7 @@ header .menu-links .links-header:hover {
   color: #820ad1;
 }
 
-header .btn-header {
+.btn-header {
   width: 160px;
   height: 45px;
   z-index: 100;
@@ -70,11 +74,13 @@ header .btn-header {
   font-weight: bold;
 }
 
-header .btn-header:hover {
+.btn-header:hover {
   background-color: #490B75;
 } 
 
-
+.btn-header:active {
+  background-color: #670da7;
+}
 
 .background-image {
   position: absolute;
@@ -119,6 +125,7 @@ header .btn-header:hover {
   font-size: 50px;
   font-weight: bold;
   color: #FFFFFF;
+  transform: translateY(400px);
   width: 40vw;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -129,6 +136,7 @@ header .btn-header:hover {
   z-index: 100;
   background-color: #820ad1;
   color: #fff;
+  transform: translateY(400px);
   border: none;
   border-radius: 55px;
   cursor: pointer;
@@ -141,7 +149,12 @@ header .btn-header:hover {
   background-color: #ffffff88;
 }
 
+.btn-main:active {
+  background-color: #670da7;
+}
+
 .section-main-2 {
+  transform: translateY(400px);
   display: flex;
   flex-direction: column;
   max-width: 400px;
@@ -187,6 +200,13 @@ header .btn-header:hover {
   text-align:start;
   cursor: pointer;
 }
+.btn-main-2:hover {
+  background-color: #490B75;
+}
+
+.btn-main-2:active {
+  background-color: #670da7;
+}
 
 .btn-main-2-wrapper{
   display: flex;
@@ -204,18 +224,25 @@ header .btn-header:hover {
   color: #fff;
 }
 
-.btn-main-2:hover {
-  background-color: #490B75;
+.btn-main-2-arrow{
+  font-size: 18px;
+  color: #fff;
+  
 }
 
 .menu-options {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: 115vh;
+  margin-top: 100vh;
   z-index: 102;
   font-size: 15px;
   font-weight: bold;
+  width: 100vw;
+  padding:100px 0 40px 0;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
 
 }
 

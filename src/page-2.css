@@ -5,8 +5,8 @@
     width: 100vw;
     height: 100vh;
     background-color: black;
-    margin-top: 5vh;
     position: absolute;
+    z-index: 103;
 }
 
 .hero-card {
@@ -29,7 +29,12 @@
   border-radius: 20px;
   padding: 20px;
   margin-top: 12vh;
-  box-shadow: #820ad1 0px 5px 25px, #820ad1 0px 0px 0px;
+}
+
+.card:hover {
+  box-shadow: #820ad1 0px 0px 40px, #820ad1 0px 0px 0px;
+  transition: all 0.3s ease-in-out;
+  
 }
 
 .card-yellow {
@@ -110,7 +115,6 @@
   color: #820ad1;
   border: none;
   border-radius: 55px;
-  cursor: pointer;
   margin: 20px 0 0 0;
   font-size: 15px;
   font-weight: 600;
@@ -161,6 +165,12 @@
 
 .btn-hero-card-2:hover {
   background-color: #490B75;
+  color: #ffffffb8;
+  transition: ease-in-out;
+}
+
+.btn-hero-card-2:active {
+  background-color: #5e099b;
   color: #ffffffb8;
   transition: ease-in-out;
 }
