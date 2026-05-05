@@ -52,10 +52,6 @@ header .menu-links .links-header {
 
 }
 
-.arrow-bottom:hover {
-color: #820ad1;
-}
-
 header .menu-links .links-header:hover {
   color: #820ad1;
 }
@@ -83,15 +79,17 @@ header .menu-links .links-header:hover {
 }
 
 .background-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(./assets/fundo-nubank.avif);
+  background-size: cover;
+  background-position: center;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100vw;
   height: 110vh;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 30px 0px 0;
-  background-position: center;
+  background-position: top;
   z-index: 1;
   border-radius: 0 0 50px 50px;
   overflow: hidden;
@@ -146,7 +144,8 @@ header .menu-links .links-header:hover {
 }
 
 .btn-main:hover {
-  background-color: #ffffff88;
+  background-color: #490B75;
+  
 }
 
 .btn-main:active {
@@ -157,7 +156,7 @@ header .menu-links .links-header:hover {
   transform: translateY(400px);
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  width: 400px;
   height: 230px;
   z-index: 101;
   background-color: #fff;

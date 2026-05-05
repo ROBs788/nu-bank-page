@@ -1,10 +1,10 @@
 import { useEffect, useRef, useMemo, useLayoutEffect } from 'react';
 import { useState } from 'react'
 import './App.css'
-import './Responsive.css'
 import './page-2.css'
 import './page-3.css'
 import './page-4.css'
+import './Responsive.css'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -39,7 +39,7 @@ export function App() {
       </header>
 
       <main>
-        <img className="background-image" src="./src/assets/fundo-nubank.avif" />
+        <div className='background-image'></div>
         <div className='wrapper-main'>
           <section className='section-main-1'>
             <h1 className='text-main'>Vote no novo nome da arena e veja o seu próprio nome aparecer lá</h1>
@@ -99,20 +99,23 @@ export function App() {
             </div>
           </div>
           <div className='hero-card-text'>
-            <button className='btn-hero-card-1'>Cartão de Credito</button>
-            <h1 className='hero-card-title'>O cartão que você controla</h1>
-            <p className='hero-card-description'>Sem anuidade. Sem complicação. Com limite que acompanha você e notificações instantaneas a cada compra.</p>
+            <div className='wrapper-hero-card-text'>
+              <button className='btn-hero-card-1'>Cartão de Credito</button>
+              
+                <h1 className='hero-card-title'>O cartão que você controla</h1>
+                <p className='hero-card-description'>Sem anuidade. Sem complicação. Com limite que acompanha você e notificações instantaneas a cada compra.</p>
 
-            <ul className='hero-list'>
+                <ul className='hero-list'>
 
-              <li><span className='icon-list'>✔</span> Zero anuidade, para sempre</li>
-              <li><span className='icon-list'>✔</span> Programa de pontos e cashback</li>
-              <li><span className='icon-list'>✔</span> Aceito em milhões de estabelecimentos</li>
-              <li><span className='icon-list'>✔</span> Bloqueio e desbloqueio pelo app</li>
+                  <li><span className='icon-list'>✔</span> Zero anuidade, para sempre</li>
+                  <li><span className='icon-list'>✔</span> Programa de pontos e cashback</li>
+                  <li><span className='icon-list'>✔</span> Aceito em milhões de estabelecimentos</li>
+                  <li><span className='icon-list'>✔</span> Bloqueio e desbloqueio pelo app</li>
 
-            </ul>
-
-            <button className='btn-hero-card-2'>Pedir meu Cartão</button>
+                </ul>
+              
+              <button className='btn-hero-card-2'>Pedir meu Cartão</button>
+            </div>
           </div>
         </div>
       </section>
@@ -161,7 +164,7 @@ export function App() {
 
         <div className='footer-section-end'>
           <hr className='hr-footer' />
-          <p>© 2026 Nubank. Todos os direitos reservados. OBRIGADO POR VER ATÉ AQUI! Construido por Robson Arruda Dev.</p>
+          <p>© 2026 Nubank. Todos os direitos reservados.</p>
         </div>
       </footer>
     </>
